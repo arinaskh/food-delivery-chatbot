@@ -1,0 +1,125 @@
+Author:Arina Sadeghi Khiabanian
+
+
+
+
+Intent:order.add - context: ongoing-order
+------------------------------------------------
+How do I make an order?
+What's on your menu? I want to order.
+I'd like to start an order.
+Can I place a new order?
+I want to order food for delivery.
+Place new order
+
+text response:
+Ok, starting a new order. You can say things like "I want two pizzas and one mango lassi". Make sure to specify a quantity for every food item! Also, we have only the following items on our menu: Pav Bhaji, Chole Bhature, Pizza, Mango Lassi, Masala Dosa, Biryani, Vada Pav, Rava Dosa, and Samosa.
+
+Starting new order. Specify food items and quantities. For example, you can say, "I would like to order two pizzas and one mango lassi. Also, we have only the following items on our menu: Pav Bhaji, Chole Bhature, Pizza, Mango Lassi, Masala Dosa, Biryani, Vada Pav, Rava Dosa, and Samosa.
+
+"Great! I can certainly help you with that. Are you looking to order for delivery or pickup?"
+
+"Perfect! Let's get started. What items would you like to add to your order?"
+
+"I'm ready to take your order! To begin, what main dish are you craving today?"
+
+"Wonderful! Before we dive into the menu, can you please confirm if this is for today or a future date?"
+
+"Hello! I can take your order right now. What's the first item you'd like?"
+
+
+
+Intent:track.order
+----------------------------------------------
+Can you check the delivery status?
+Where is my food right now?
+track order
+track existing order
+check the status of my order
+What's the ETA for my order?
+I want to see where my order is.
+
+text response:
+Definitely. What is your order id?
+
+Sure. Please enter your order id.
+
+Definitely. What is your order id?
+
+"Certainly. To check the status, could you please provide your Order Number?"
+
+"I can do that! What is the Order ID associated with your request?"
+
+"No problem! Please tell me your Order Confirmation Number or the phone number used to place the order."
+
+"Checking the tracker now... What is the tracking number for your order?"
+
+"I just need one piece of info: What is your Order Number? I'll look up the current status for you."
+
+
+
+Intent:new.order -context:ongoing order
+-----------------------------------------------
+
+Give me 2 plates of chole bhature, one cheese pizza
+I'd like to order two plates of chole bhature,  one cheese pizza, and 3 mango lassi, please.
+Can you please get me two servings of chole bhature, one cheese pizza, and one mango lassi?
+Please prepare 2 portions of chole bhature, along with one cheese pizza and 1 mango lassi for me
+3 biryani, 2 lassi, 1 pav bhaji
+Can I get 2 plates of chole bhature, along with one cheese pizza and 1 mango lassi?
+I'll take 2 orders of chole bhature, one cheese pizza, and 1 mango lassi, if you don't mind
+I want 1 lassi, 2 chhole bhature and one vada paav, do it fast plz
+In addition, add 1 bhaji pav and 2 pizzas
+Moreover, include 2 mango lassi
+Also, please give me 2 mango lassi
+Additionally, I'd like 2 mango lassi.
+2 pizza and ok lets add one biryani too
+3 biryani
+Oh yes, add one pav bhaji as well
+
+
+Intent= order.remove - context: ongoing-order
+-------------------------------------------------
+No pav bhaji and samosa in my order. please remove.
+Kindly take pav bhaji and samosa off the order, please.
+I'd like to exclude pav bhaji and samosa, please
+I no longer want the rava dosa in my order, please remove it
+Kindly exclude the rava dosa from my order
+I would like to remove the pizza from my order
+Please take the pizza off my order
+delete chole from my order
+hey, plz get rid of rava dosa and samosa
+I don't want pav bhaji
+remove pizza from my order
+can you remove mango lassi?
+
+
+Intent= track.order - context: ongoing-tracking
+---------------------------------------------------
+how about 32
+how about 40?
+here it is - 63321
+here you go: 123
+here is my order number 675
+id is 453
+here is my order id # 341
+7890
+123
+345
+
+
+Intent= order.complete - context: ongoing-order
+---------------------------------------------------
+Nope
+That's all I needed
+Done ordering it
+Place an order
+Done
+That's it
+
+text response:
+Awesome! Your order is placed. Here is your order id #
+
+
+
+
