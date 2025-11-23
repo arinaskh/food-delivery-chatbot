@@ -83,6 +83,40 @@ try:
     # Include all other functions (get_order_status, insert_order_item, etc.)
 except Error as e:
     print(f"CRITICAL ERROR: Failed to connect to MySQL database: {e}")
+```
+
+### 4\. Run the Webhook Server
+
+1.  In your **activated terminal** (`(.venv)`), start the Uvicorn server:
+    ```bash
+    uvicorn main:app --reload
+    ```
+    (Keep this terminal window running and open.)
+
+    ### 5\. Connect Dialogflow
+
+1.  In a **separate terminal window**, start the `ngrok` tunnel:
+    ```bash
+    .\ngrok http 8000
+    ```
+2.  Copy the generated **`https://`** Forwarding URL (e.g., `https://example.ngrok.app`).
+3.  Go to the **Dialogflow ES Console** -> **Fulfillment**.
+4.  Paste the URL plus a slash (`/`) into the Webhook URL field and **Save**.
+5.  Ensure the following intents have **Webhook Call Enabled** in their Fulfillment section:
+      * `order.add - context: ongoing-order`
+      * `order.remove - context: ongoing-order`
+      * `order.complete - context: ongoing-order`
+      * `track.order - context: ongoing-tracking`
+
+-----
+
+## 🌐 Frontend Instructions
+
+1.  Ensure all image files (`1.jpg`, `2.jpg`, etc.) are in the same directory as `index.html`.
+2.  **CRITICAL:** Replace the placeholder Agent ID in the HTML file (`index.html`) with your actual Dialogflow Agent ID:
+    ```html
+    <df-messenger agent-id="YOUR-AGENT-ID-HERE" ... ></df-messenger>
+    ```
 
 
 
