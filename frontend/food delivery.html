@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandeyji's Eatery - Order Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Provided by User --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff5733; 
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        section h2 {
+            color: #ff5733;
+            text-align: center;
+            border-bottom: 2px solid #ff5733;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the Banner (1.jpg) */
+        #home img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        /* The .chat-bot class is no longer needed as df-messenger handles the styling */
+        df-messenger {
+            /* Custom styling to match your theme */
+            --df-messenger-button-titlebar-color: #ff5733; 
+            --df-messenger-chat-background-color: #f0f0f0;
+            --df-messenger-send-icon: #ff5733;
+            --df-messenger-font-color: #333;
+        }
+
+        .full-menu-image {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 20px auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            background-color: #ff5733;
+            text-align: center;
+            padding: 15px;
+            color: #fff;
+            margin-top: 40px; 
+            width: 100%;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 15px; }
+            h1 { font-size: 1.5em; }
+            nav a { display: block; padding: 5px 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pandeyji's Eatery</h1>
+            <nav>
+                <a href="#menu">Menu</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#order">Place Order</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Banner Section -->
+        <section id="home">
+            <h2>Spicing Up Your Life with a Taste of India!</h2>
+            <p>Welcome to Authentic Indian Cuisine. Experience the best of North and South Indian flavors delivered right to your door.</p>
+            <!-- Image 1.jpg reference -->
+            <img src="banner.jpg" alt="Restaurant banner showing people eating Indian food and samosas">
+        </section>
+
+        <!-- 2. Menu Section -->
+        <section id="menu">
+            <h2>Our Full Menu Categories</h2>
+            <p style="text-align:center; color:#333; font-style: italic;">Chat with the bot to order any of the items below!</p>
+
+            <div class="menu-grid">
+                
+                <div class="menu-item-container">
+                    <h3>Street Food Classics</h3>
+                    <!-- Image 2.jpg reference: Samosa, Pav Bhaji, Chole Bhature -->
+                    <img class="full-menu-image" src="menu1.jpg" alt="Menu image 1 showing Samosa, Pav Bhaji, and Chole Bhature">
+                    <p style="text-align: center; color: #ff5733;">Samosa ($5), Pav Bhaji ($6), Chole Bhature ($7)</p>
+                </div>
+
+                <div class="menu-item-container">
+                    <h3>South Indian & Beverages</h3>
+                    <!-- Image 3.jpg reference: Mango Lassi, Masala Dosa, Rava Dosa -->
+                    <img class="full-menu-image" src="menu2.jpg" alt="Menu image 2 showing Mango Lassi, Masala Dosa, and Rava Dosa">
+                    <p style="text-align: center; color: #ff5733;">Mango Lassi ($5), Masala Dosa ($6), Rava Dosa ($7)</p>
+                </div>
+
+                <div class="menu-item-container">
+                    <h3>Rice & Main Dishes</h3>
+                    <!-- Image 4.jpg reference: Biryani, Pizza, Vada Pav -->
+                    <img class="full-menu-image" src="menu3.jpg" alt="Menu image 3 showing Biryani, Pizza, and Vada Pav">
+                    <p style="text-align: center; color: #ff5733;">Biryani ($9), Pizza ($8), Vada Pav ($4)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Section -->
+        <section id="about">
+            <h2>Our Story</h2>
+            <p>Pandeyji's Eatery was founded on the principle of bringing genuine, home-style Indian cooking to your neighborhood. We use only the freshest ingredients and traditional techniques to ensure every dish is a true culinary experience. We specialize in popular street food, delicious Biryani, and traditional Dosas. Order from us and taste the difference!</p>
+        </section>
+    </main>
+
+    <!-- DIALOGFLOW MESSENGER INTEGRATION - CORRECT PLACEMENT -->
+    <!-- This snippet will automatically generate the floating chatbot button. -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Mira-chatbot-for-food-delivery"
+      agent-id="3f359dc7-3f5c-4cb1-91af-e8c86e8c397a"
+      language-code="en"
+    ></df-messenger>
+
+    <footer>
+        <div class="container">
+            &copy; 2025 Pandeyji's Eatery. All rights reserved. | Chat with the bot to place your order!
+        </div>
+    </footer>
+</body>
+</html>
