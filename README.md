@@ -1,5 +1,3 @@
-# food-delivery-chatbot
-Full-stack AI webhook for a restaurant delivery service, using Python/FastAPI to manage conversational state and MySQL for persistent order tracking and fulfillment.
 🍕 Mira Food Delivery Bot (FastAPI Webhook)
 
 This project implements a conversational AI agent for a fictional restaurant, "Pandeyji's Eatery," allowing users to place, modify, and track food delivery orders directly through a website chatbot.
@@ -183,7 +181,6 @@ Ensure all image files (1.jpg, 2.jpg, etc.) are in the same directory as index.h
 CRITICAL: Replace the placeholder Agent ID in the HTML file (index.html) with your actual Dialogflow Agent ID:
 
 <df-messenger agent-id="YOUR-AGENT-ID-HERE" ... ></df-messenger>
-
 
 
 
