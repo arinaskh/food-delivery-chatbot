@@ -117,7 +117,6 @@ except Error as e:
     ```html
     <df-messenger agent-id="YOUR-AGENT-ID-HERE" ... ></df-messenger>
     ```
-
-
+P.s.In the backend folder there is only requirements.txt file.but in the main menu you can find all the bakend files and place them exactly how I placed them
 
 
